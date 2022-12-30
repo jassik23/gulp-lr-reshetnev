@@ -1,0 +1,107 @@
+body
+	background-color #164B69
+	font-size 14px
+	font-family arial
+main
+	margin 0 auto
+	max-width 700px
+	min-height 700px
+	height 100%
+	background-color #E3E3E3
+	& p
+		text-align justify
+		line-height 2
+		word-spacing 2px
+		text-indent 1.5em
+	& .content
+		margin 15px
+		padding 0 5px
+nav
+	margin 0 auto
+	font-weight bold
+	padding-top 10px
+	& ul
+		display flex
+		flex-direction row
+		justify-content space-around
+		list-style none
+		& li.active
+			background-color #DCDCDC
+		& li
+			height auto
+			display inherit
+			align-items stretch
+			padding 15px
+			color #DCDCDC
+			& a
+				text-decoration none
+				color black
+			& a:hover
+				color #DCDCDC
+.gallery--upper-img
+	display flex
+	flex-direction row
+	& > p
+		display inherit
+		flex-direction column
+		margin-right 10px
+	& > img
+		float right
+		display inherit
+		flex-direction column
+	& img.gallery-font
+		display inherit
+		width 33.3%
+		margin 5px
+	& img.gallery-syntax
+		display inherit
+		width 25%
+		margin 5px
+.line-video
+	display flex
+	justify-content center
+	height 60%
+	width 100%
+	min-height 300px
+	video
+		margin 5px
+.left--two-img
+	display flex
+	flex-direction column
+	& img
+		margin 5px
+.img--down-page
+	display flex
+	flex-direction row
+	& img
+		margin 5px
+		flex-wrap wrap
+		justify-content center
+footer
+	margin 0 auto
+	max-width 700px
+	min-height 200px
+	background-color #E3E3E3
+@media(max-width:600px)
+	main
+		width auto
+		max-width 100%
+		min-height 100%
+		& .content
+			flex-grow 1
+			& .gallery--upper-img
+				flex-direction column-reverse
+			& .gallery-font
+				width auto
+			& .gallery-syntax
+				width auto
+			& .img--down-page
+				width auto
+				flex-direction column
+	nav
+	& ul
+		flex-flow column wrap
+		& li
+			align-self center
+	video
+		width 100%

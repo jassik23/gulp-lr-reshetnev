@@ -1,0 +1,31 @@
+extends components/template
+block link
+    -var title = 'CSS font'
+    link(rel="stylesheet", href="./css/bootstrap-reboot.min.css")
+    link(rel="stylesheet", href="./css/main.css")
+block content
+    main
+        include components/header
+        nav
+            +createHeader([['CSS', 'index.html', 0], ['Синтаксис CSS', 'syntax_css.html', 0], ['Вставка CSS', '', 0], ['CSS текст', '', 0], ['CSS шрифт', 'font_css.html', 1], ['Блоки', '', 0]])
+        .content
+            .gallery--upper-img
+                img.gallery-font(src="img/css-text.png")
+                img.gallery-font(src="img/css-probely.png")
+                img.gallery-font(src="img/css-text-decoration.png")
+            .line
+                p
+                    code font
+                    |  - универсальное свойство, которое позволяет одновременно задать несколько характеристик шрифта и текста.
+                    br
+                    | Синтаксис
+                    br
+                    code [font-style||font-variant||font-weight] font-size [/line-height] font-family
+                    br
+                p
+                    code font-style
+                    |  - определяет начертание шрифта: обычное, курсивное или наклонное. Когда для текста установлено курсивное или наклонное начертание, браузер обращается к системе для поиска подходящего шрифта. Если заданный шрифт не найден, браузер использует специальный алгоритм для имитации нужного вида текста. Результат и качество при этом могут получиться неудовлетворительными, особенно при печати документа.
+                    br
+                    | Синтаксис
+                    br
+                    code font-style: normal | italic | oblique | inherit

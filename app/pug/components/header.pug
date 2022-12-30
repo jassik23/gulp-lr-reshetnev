@@ -1,0 +1,13 @@
+mixin createHeader(ListOfHeader='Нет списка')
+    if ListOfHeader === 'нет списка'
+        p=ListOfHeader
+    else
+        ul.list
+            each name in ListOfHeader
+                if name[2] == 1
+                    li.active
+                        a(href=name[1])= name[0]
+                else
+                    li
+                        a(href=name[1])= name[0]
+

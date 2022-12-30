@@ -1,0 +1,33 @@
+extends components/template
+block link
+    -var title = 'CSS syntax'
+    link(rel="stylesheet", href="./css/bootstrap-reboot.min.css")
+    link(rel="stylesheet", href="./css/main.css")
+block content
+    main
+        include components/header
+        nav
+            +createHeader([['CSS', 'index.html', 0], ['Синтаксис CSS', 'syntax_css.html', 1], ['Вставка CSS', '', 0], ['CSS текст', '', 0], ['CSS шрифт', 'font_css.html', 0], ['Блоки', '', 0]])
+        .content
+            .gallery--upper-img
+                img.gallery-syntax(src="img/css-text.png")
+                img.gallery-syntax(src="img/css-probely.png")
+                img.gallery-syntax(src="img/css-text-decoration.png")
+                img.gallery-syntax(src="img/css-text-decoration.png")
+            .line-img
+                p The selector points to the HTML element you want to style.
+                    | The declaration block contains one or more declarations separated by semicolons.
+                    br
+                    | Each declaration includes a CSS property name and a value, separated by a colon.
+                    br
+                    | Multiple CSS declarations are separated with semicolons, and declaration blocks are surrounded by curly braces.
+                    br
+                    | Setting CSS properties to specific values is the core function of the CSS language. A property and value pair is called a declaration, and any CSS engine calculates which declarations apply to every single element of a page in order to appropriately lay it out, and to style it.
+                .left--two-img
+                    img(src="img/css1.jpg")
+                    img(src="img/css2.jpg")
+            .img--down-page
+                img(src="img/syntax.jpg")
+block scripts
+    script(src="js/jquery-3.5.1.min.js")
+    script(src="js/main.js")

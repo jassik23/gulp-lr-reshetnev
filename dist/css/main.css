@@ -1,0 +1,140 @@
+body {
+  background-color: #164b69;
+  font-size: 14px;
+  font-family: arial;
+}
+main {
+  margin: 0 auto;
+  max-width: 700px;
+  min-height: 700px;
+  height: 100%;
+  background-color: #e3e3e3;
+}
+main p {
+  text-align: justify;
+  line-height: 2;
+  word-spacing: 2px;
+  text-indent: 1.5em;
+}
+main .content {
+  margin: 15px;
+  padding: 0 5px;
+}
+nav {
+  margin: 0 auto;
+  font-weight: bold;
+  padding-top: 10px;
+}
+nav ul {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  list-style: none;
+}
+nav ul li.active {
+  background-color: #dcdcdc;
+}
+nav ul li {
+  height: auto;
+  display: inherit;
+  align-items: stretch;
+  padding: 15px;
+  color: #dcdcdc;
+}
+nav ul li a {
+  text-decoration: none;
+  color: #000;
+}
+nav ul li a:hover {
+  color: #dcdcdc;
+}
+.gallery--upper-img {
+  display: flex;
+  flex-direction: row;
+}
+.gallery--upper-img > p {
+  display: inherit;
+  flex-direction: column;
+  margin-right: 10px;
+}
+.gallery--upper-img > img {
+  float: right;
+  display: inherit;
+  flex-direction: column;
+}
+.gallery--upper-img img.gallery-font {
+  display: inherit;
+  width: 33.3%;
+  margin: 5px;
+}
+.gallery--upper-img img.gallery-syntax {
+  display: inherit;
+  width: 25%;
+  margin: 5px;
+}
+.line-video {
+  display: flex;
+  justify-content: center;
+  height: 60%;
+  width: 100%;
+  min-height: 300px;
+}
+.line-video video {
+  margin: 5px;
+}
+.left--two-img {
+  display: flex;
+  flex-direction: column;
+}
+.left--two-img img {
+  margin: 5px;
+}
+.img--down-page {
+  display: flex;
+  flex-direction: row;
+}
+.img--down-page img {
+  margin: 5px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+footer {
+  margin: 0 auto;
+  max-width: 700px;
+  min-height: 200px;
+  background-color: #e3e3e3;
+}
+@media (max-width: 600px) {
+  main {
+    width: auto;
+    max-width: 100%;
+    min-height: 100%;
+  }
+  main .content {
+    flex-grow: 1;
+  }
+  main .content .gallery--upper-img {
+    flex-direction: column-reverse;
+  }
+  main .content .gallery-font {
+    width: auto;
+  }
+  main .content .gallery-syntax {
+    width: auto;
+  }
+  main .content .img--down-page {
+    width: auto;
+    flex-direction: column;
+  }
+  nav,
+  ul {
+    flex-flow: column wrap;
+  }
+  nav li,
+  ul li {
+    align-self: center;
+  }
+  video {
+    width: 100%;
+  }
+}
